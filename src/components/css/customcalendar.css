@@ -1,0 +1,98 @@
+.calendar-parent
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22rem;
+  font-size: 14px;
+  gap: 1rem;
+}
+
+.calendar-title
+{
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.calendar-main
+{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+}
+
+.day
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+  border: 0.5px solid black;
+  position: relative;
+  font-weight: 600;
+  cursor: pointer;
+  color: black;
+}
+
+.day.head
+{
+  color: var(--primary-color);
+}
+
+.day.present
+{
+  background-color: #03c400;
+  color: white;
+}
+
+.day.absent
+{
+  background-color: red;
+  color: white;
+}
+
+/* .day.present::after
+{
+  position: absolute;
+  content: "✅";
+  opacity: 0.4;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.day.absent::after
+{
+  position: absolute;
+  content: "❌";
+  opacity: 0.4;
+  font-size: 1.2rem;
+  cursor: pointer;
+} */
+
+#tip
+{
+  background-color: red;
+  padding: 1rem;
+  position: absolute;
+  color: white;
+  /* display: none; */
+  cursor: pointer;
+}
+
+#tip::after
+{
+  position: absolute;
+  content: "";
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;     
+  border-bottom: 10px solid red;
+  top: 38%;
+  left: -12%;
+  transform: rotate(-90deg);
+}

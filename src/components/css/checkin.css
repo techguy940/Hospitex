@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root
+{
+  --primary-color: #ff7300;
+  --secondary-color: #cf5d00;
+  --login-bg-color: #d6d6d6;
+  --bg-color: white;
+}
+
+.checkin-main
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.checkin-title
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.filter-options
+{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 60rem;
+}
+
+.room .gray i
+{
+  font-size: 2rem;
+}
+
+.room .gray i:hover
+{
+  color: var(--primary-color);
+  transition: 150ms ease-in-out;
+}
+
+.floors-main
+{
+  margin-top: 1rem;
+}
+
+.checkin-modal-main
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.checkin-modal-title
+{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  align-items: center;
+  width: 30rem;
+  height: 40px;
+}
+
+.checkin-modal-title h1
+{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.checkin-modal-title i
+{
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+  cursor: pointer;
+}
+
+.checkin-modal-inputs
+{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.checkin-modal-input
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.checkin-modal-input.row
+{
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.input-wrap
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.checkin-modal-input label
+{
+  color: var(--primary-color);
+  font-size: 12px;
+}
+
+.checkin-modal-input label .compulsory
+{
+  color: red;
+}
+
+.checkin-modal-input input
+{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border: 2px solid var(--login-bg-color);
+  border-radius: 3px;
+  font-size: 14px;
+  outline: none;
+}
+
+.checkin-modal-input input:focus
+{
+  border: 2px solid var(--primary-color);
+  transition: 150ms ease-in-out;
+}
+
+.checkin-modal-input .phone-section
+{
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border: 2px solid var(--login-bg-color);
+  border-radius: 3px;
+  font-size: 14px;
+  width: 28rem;
+
+}
+
+.checkin-modal-input .phone-section:focus-within
+{
+  border: 2px solid var(--primary-color);
+  transition: 150ms ease-in-out;
+}
+
+.checkin-modal-input .phone-section .num-prefix
+{
+  font-size: 14px;
+  color: black;
+  padding-right: 0.5rem;
+  border-right: 2px solid var(--login-bg-color);
+}
+
+.checkin-modal-input #numInput
+{
+  border: none;
+  width: 100%;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+.checkin-modal-input #numInput:hover
+{
+  border: none;
+}
+
+.checkin-modal-input #roomNumInput,
+.checkin-modal-input #membersInput
+{
+  width: 13.5rem;
+}
+
+.checkin-modal-input #identityInput,
+.checkin-modal-input #gstnInput
+{
+  width: 28rem;
+}
+
+.checkin-modal-input #roomFromInput,
+.checkin-modal-input #roomToInput
+{
+  width: 13.5rem;
+  cursor: pointer;
+}
+
+.money-input
+{
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border: 2px solid var(--login-bg-color);
+  border-radius: 3px;
+  width: 13.5rem;
+}
+
+.money-input:focus-within
+{
+  border: 2px solid var(--primary-color);
+  transition: 150ms ease-in-out;
+}
+
+.money-input span
+{
+  border-right: 2px solid var(--login-bg-color);
+  padding-right: 0.5rem;
+  color: black;
+}
+
+.money-input input
+{
+  border: none;
+  outline: none;
+  direction: rtl;
+  width: 100%;
+  font-weight: 600;
+}
+
+.money-input input:focus
+{
+  border: none;
+  transition: none;
+}
+
+.checkin-modal-input #submitBtn
+{
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  color: white;
+  background-color: var(--primary-color);
+  height: 40px;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+.checkin-modal-input #submitBtn:hover
+{
+  background-color: var(--secondary-color);
+  color: var(--login-bg-color);
+  transition: 150ms ease-in-out;
+}
+
+.file-upload-btn
+{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--primary-color);
+  background-color: white;
+  width: 10rem;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.file-upload-btn:hover
+{
+  color: var(--secondary-color);
+  transition: 150ms ease-in-out;
+}
+
+.file-text
+{
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+
+.file-name
+{
+  color: #0000EE !important;
+  font-size: 14px !important;
+  cursor: pointer;
+}
+
+.file-status
+{
+  font-size: 16px !important;
+  color: red !important;
+  cursor: pointer;
+}
+
+.file-status:hover
+{
+  transition: 150ms ease-in-out;
+  color: #a10000;
+}
+
+
+.file-name:hover
+{
+  color: #0000a1;
+  transition: 150ms ease-in-out;
+}
+
+.success-text
+{
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.success-text section
+{
+  display: flex;
+  gap: 0.5rem;
+}
+
+.success-text .success-title
+{
+  width: 30rem;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: var(--primary-color);
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  height: 40px;
+}
+
+.success-text .success-title h1
+{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.success-text .success-title i
+{
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+  cursor: pointer;
+}
+
+.success-text .success-main
+{
+  padding: 1rem;
+  padding-top: 0.5rem;
+}
+
+.success-text .success-main span
+{
+  font-size: 1.1rem;
+}
+
+.success-text .success-main .success-txn-id
+{
+  cursor: pointer;
+}
+
+.prices-inputs
+{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.prices-inputs section
+{
+  border: none;
+  padding: 0;
+}
+
+.prices-inputs section .package-name
+{
+  border: none;
+  padding-right: none;
+  width: 11rem;
+}
+
+.prices-inputs section input
+{
+  border: none;
+}
+
+.prices-inputs section input:focus
+{
+  outline: 2px solid var(--primary-color);
+  /* outline-radius: 3px; */
+  /* transition: 150ms ease-in-out; */
+}
+
+.prices-inputs section:focus-within
+{
+  border: none;
+  transition: none;
+}

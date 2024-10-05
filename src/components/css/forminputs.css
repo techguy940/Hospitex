@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root
+{
+  --primary-color: #ff7300;
+  --secondary-color: #cf5d00;
+}
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;  
+}
+
+.hotel-input .compulsory,
+.food-item-title .compulsory,
+.food-item-price .compulsory,
+.food-item-subcategory .compulsory,
+.subcategory-title .compulsory,
+.room-ppn .compulsory
+{
+    color: red;
+}
+
+.hotel-input,
+.food-item-title,
+.food-item-price,
+.food-item-subcategory,
+.subcategory-title,
+.room-ppn
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hotel-input label,
+.food-item-title label,
+.food-item-price label,
+.food-item-subcategory label,
+.subcategory-title label,
+.room-ppn label
+{
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+.hotel-input input,
+.hotel-input textarea,
+.food-item-title input,
+.food-item-title textarea,
+.food-item-price input,
+.food-item-price textarea,
+.food-item-subcategory input,
+.food-item-subcategory textarea,
+.subcategory-title input,
+.subcategory-title textarea,
+.room-ppn input,
+.room-ppn textarea
+{
+    outline: none;
+    border: 2px solid var(--login-bg-color);
+    border-radius: 2px;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 14px;
+    resize: none;
+}
+
+.hotel-input input::-webkit-outer-spin-button,
+.hotel-input input::-webkit-inner-spin-button,
+.food-item-title input::-webkit-inner-spin-button,
+.food-item-title input::-webkit-outer-spin-button,
+.food-item-price input::-webkit-outer-spin-button,
+.food-item-price input::-webkit-inner-spin-button,
+.food-item-subcategory input::-webkit-inner-spin-button,
+.food-item-subcategory input::-webkit-outer-spin-button,
+.subcategory-title input::-webkit-inner-spin-button,
+.subcategory-title input::-webkit-outer-spin-button,
+.room-ppn input::-webkit-inner-spin-button,
+.room-ppn input::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.hotel-input input[type="number"],
+.food-item-title input[type="number"],
+.food-item-price input[type="number"],
+.food-item-subcategory input[type="number"],
+.subcategory-title input[type="number"],
+.room-ppn input[type="number"]
+{
+    -moz-appearance: textfield;
+}
+
+.hotel-input .price-wrapper,
+.food-item-title .price-wrapper,
+.food-item-price .price-wrapper,
+.food-item-subcategory .price-wrapper,
+.subcategory-title .price-wrapper,
+.room-ppn .price-wrapper
+{
+    display: flex;
+}
+
+.hotel-input .price-wrapper .symbol,
+.food-item-title .price-wrapper .symbol,
+.food-item-price .price-wrapper .symbol,
+.food-item-subcategory .price-wrapper .symbol,
+.subcategory-title .price-wrapper .symbol,
+.room-ppn .price-wrapper .symbol
+{
+    padding: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    font-size: 1.2rem;
+    border-left: 2px solid var(--login-bg-color);
+    border-top: 2px solid var(--login-bg-color);
+    border-bottom: 2px solid var(--login-bg-color);
+}
+
+.hotel-input input:focus,
+.food-item-title input:focus,
+.food-item-price input:focus,
+.food-item-subcategory input:focus,
+.subcategory-title input:focus,
+.room-ppn input:focus
+{
+    border: 2px solid black;
+    transition: 150ms ease-in-out;
+}

@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root
+{
+  --primary-color: #ff7300;
+  --secondary-color: #cf5d00;
+  --login-bg-color: #d6d6d6;
+  --bg-color: white;
+}
+
+body::-webkit-scrollbar,
+.add-subcategory-modal::-webkit-scrollbar,
+.ReactModal__Content::-webkit-scrollbar
+{
+    width: 0 !important;
+}
+body
+{
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+
+.manage-food-main
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.manage-food-title
+{
+    text-align: center;
+    padding-top: 3rem;
+}
+
+
+.manage-food-title h1
+{
+    font-size: 2rem;
+}
+
+.food-div
+{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-left: 4.5rem;
+    padding-bottom: 0rem;
+}
+
+.food-div .breakfast-title h1
+{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.food-div .breakfast-title
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.food-div .breakfast-title i
+{
+    font-size: 1.5rem;
+    padding-top: 0.9rem;
+}
+
+.food-items
+{
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    max-height: 0;
+    padding: 2rem;
+}
+
+.food-items
+{
+    display: grid;
+    max-height: 100vh;
+    transition: display 2s ease-in-out;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.food-item .food-category-title
+{
+    font-size: 1.2rem;
+    text-decoration: underline var(--primary-color) solid 2px;
+    margin-right: 1rem;
+}
+
+.items-list
+{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.item
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.item-title
+{
+    width: 13rem;
+}
+
+.item-utils
+{
+    display: flex;
+    align-items: center;
+    /* align-items: center; */
+    gap: 0.5rem;
+}
+
+
+.item-utils i
+{
+    font-size: 1.2rem;
+    padding-top: 0.3rem;
+    cursor: pointer;
+    color: gray;
+}
+
+.item-utils i:hover
+{
+    color: black;
+    transition: 150ms ease-in-out;
+}
+
+.item-utils i[id="deleteBtn"]
+{
+    color: red;
+}
+
+.item-utils i[id="deleteBtn"]:hover
+{
+    color: #de0f00;
+    transition: 150ms ease-in-out;
+}
+
+.item-price
+{
+    text-align: right;
+    color: var(--primary-color);
+    width: 45px !important;
+    font-weight: 600;
+}
+
+.food-title-utils
+{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+
+.food-title-utils i
+{
+    font-size: 1.2rem;
+    padding-top: 0.3rem;
+    cursor: pointer;
+    color: gray;
+}
+
+.food-title-utils i:hover
+{
+    color: black;
+    transition: 150ms ease-in-out;
+}
+
+.proceed-cart
+{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proceed-cart #cart-btn
+{
+    display: none;
+    padding: 0.5rem;
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding-top: 0.6rem;
+    padding-left: 0.6rem;
+    position: relative;
+}
+
+.proceed-cart #cart-btn span
+{
+    display: none;
+    position: absolute;
+    top: -3px;
+    right: -6px;
+    font-size: 14px;
+    background-color: red;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding-top: 0.1rem;
+}
+
+.modal-parent
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.modal-parent section
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.modal-parent section label
+{
+    color: var(--primary-color);
+    font-size: 0.75rem;
+}
+
+.modal-table
+{
+    color: black;
+}
+
+.modal-table td, 
+.modal-table th
+{
+    border: 1px solid black;
+    text-align: left;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+.modal-table tr:hover
+{
+    background-color: var(--login-bg-color);
+}
+
+.modal-table .total
+{
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.modal-table .right
+{
+    text-align: right;
+}
+
+.modal-table .center
+{
+    text-align: center;
+}
+
+.modal-table .final
+{
+    font-size: 1.25rem;
+}
+
+.modal-table .bold
+{
+    font-weight: 700;
+}
+
+.modal-table
+{
+    border: 2px solid black;
+}
+
+.modal-parent .add-order
+{
+    display: flex;
+    direction: rtl;
+}
+
+.modal-parent .add-order #add-order-btn
+{
+  margin-top: 1.5rem;
+  padding: .25rem;
+  width: 10rem;
+  height: 40px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  outline: none;
+  border: none;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.modal-parent .add-order #add-order-btn:hover
+{
+    background-color: var(--secondary-color);
+    color: #dedcdc;
+    transition: 100ms ease-in-out;
+}
+
+.close-modal
+{
+    direction: rtl;
+    padding-right: 0.2rem;
+}
+
+.close-modal #close-btn
+{
+    color: red;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.close-modal #close-btn:hover
+{
+    color: #e30000;
+    transition: 150ms ease-in-out;
+}
+
+.fi.fi-rs-check-circle
+{
+    color: #32b300;
+}
+
+.fi.fi-rs-check-circle:hover
+{
+    color: #00ff26;
+}
+
+.edit-item-modal,
+.add-item-modal,
+.delete-item-modal,
+.delete-subcategory-modal,
+.add-subcategory-modal
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+    position: relative;
+}
+
+.edit-item-modal .edit-item-title,
+.add-item-modal .add-item-title,
+.delete-item-modal .delete-item-title,
+.delete-subcategory-modal .delete-subcategory-title,
+.add-subcategory-modal .add-subcategory-title
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+    align-items: center;
+    width: 38.3rem;
+}
+
+.delete-item-modal .delete-item-title,
+.delete-subcategory-modal .delete-subcategory-title
+{
+    width: 28.7rem;
+}
+
+.delete-item-text,
+.delete-subcategory-text
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-item-text .red,
+.delete-subcategory-text .red
+{
+    color: red;
+}
+
+.delete-item-text .bold,
+.delete-subcategory-text .bold
+{
+    font-weight: 600;
+}
+
+.delete-item-text p,
+.delete-subcategory-text p
+{
+    font-size: 1.2rem;
+    color: black;
+}
+
+.delete-item-btns,
+.delete-subcategory-btns
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.delete-item-btns button,
+.delete-subcategory-btns button
+{
+    width: 14.35rem;
+    cursor: pointer;
+    color: white;
+    border: none;
+    outline: none;
+    height: 2.5rem;
+    font-size: 0.9rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.delete-item-btns #delete-item-btn,
+.delete-subcategory-btns #delete-subcategory-btn
+{
+    background-color: red;
+}
+
+.delete-item-btns #delete-item-btn:hover,
+.delete-subcategory-btns #delete-subcategory-btn:hover
+{
+    background-color: #d40000;
+    transition: 150ms ease-in-out;
+}
+
+.delete-item-btns #go-back,
+.delete-subcategory-btns #go-back
+{
+    background-color: green;
+}
+
+.delete-item-btns #go-back:hover,
+.delete-subcategory-btns #go-back:hover
+{
+    background-color: #02570a;
+    transition: 150ms ease-in-out;
+}
+
+.edit-item-modal .edit-item-title h1,
+.add-item-modal .add-item-title h1,
+.delete-item-modal .delete-item-title h1,
+.delete-subcategory-modal .delete-subcategory-title h1,
+.add-subcategory-modal .add-subcategory-title h1
+{
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.edit-item-modal .edit-item-title i,
+.add-item-modal .add-item-title i,
+.delete-item-modal .delete-item-title i,
+.delete-subcategory-modal .delete-subcategory-title i,
+.add-subcategory-modal .add-subcategory-title i
+{
+    color: white;
+    font-size: 1.2rem;
+    padding-top: 0.3rem;
+    cursor: pointer;
+}
+
+
+.food-item-title,
+.food-item-subcategory
+{
+    padding: 1rem;
+    padding-bottom: 0rem;
+}
+
+.food-item-price
+{
+    color: black;
+    padding: 1rem;
+    padding-bottom: 0rem;
+}
+
+.food-item-price input
+{
+    text-align: right;
+}
+
+.edit-item,
+.add-item
+{
+    padding-right: 1rem;
+    padding-top: 0.2rem;
+    direction: rtl;
+}
+
+.edit-item #edit-item-btn,
+.add-item #add-item-btn,
+.add-category #addCategoryBtn,
+.add-subcategory #add-subcategory-btn
+{
+  margin-top: 1.5rem;
+  padding: .25rem;
+  width: 10rem;
+  height: 40px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  outline: none;
+  border: none;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.edit-item #edit-item-btn:hover,
+.add-item #add-item-btn:hover,
+.add-category #addCategoryBtn:hover,
+.add-subcategory #add-subcategory-btn:hover
+{
+    background-color: var(--secondary-color);
+    color: #dedcdc;
+    transition: 100ms ease-in-out;
+}
+
+
+.food-title-utils i[id="deleteSubCategory"]
+{
+    color: red;
+}
+
+.food-title-utils i[id="deleteSubCategory"]:hover
+{
+    color: #de0f00;
+    transition: 150ms ease-in-out;
+}
+
+.add-category
+{
+    display: flex;
+    direction: rtl;
+    margin-right: 4rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.add-category #addCategoryBtn,
+.add-subcategory #add-subcategory-btn
+{
+    display: flex;
+    gap: 0.2rem;
+    justify-content: center;
+    align-items: center;
+    direction: ltr;
+    width: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+
+.add-category #addCategoryBtn i
+{
+    padding-top: 0.3rem;
+}
+
+.add-subcategory-details
+{
+    padding: 1rem;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.add-subcategory
+{
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    direction: rtl;
+}
+
+.subcategory-items
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.1rem;
+    padding-top: 1rem;
+    color: black;
+}
+
+.subcategory-items #subcategory-add-items-title
+{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.subcategory-items .subcategory-items-utils
+{
+    display: flex;
+    width: 36rem;
+    justify-content: space-between;
+}
+
+.subcategory-items .subcategory-items-utils .subcategory-item-add-name
+{
+    flex-basis: 25rem;
+}
+
+.subcategory-item-input
+{
+    display: flex;
+    width: 36rem;
+    justify-content: space-between;
+}
+
+.subcategory-item-input .subcategory-item-name-input
+{
+    width: 25rem;
+}
+
+.subcategory-item-input .subcategory-item-price-input
+{
+    width: 4rem;
+    color: var(--primary-color);
+}
+
+.subcategory-item-input .subcategory-item-price-input::-webkit-inner-spin-button,
+.subcategory-item-input .subcategory-item-price-input::-webkit-outer-spin-button
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.subcategory-item-input .subcategory-item-price-input
+{
+    -moz-appearance: textfield;
+}
+
+
+.subcategory-item-input input
+{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--login-bg-color);
+}
+
+.subcategory-item-input input:focus
+{
+    border-bottom: 1px solid black;
+    transition: 150ms ease-in-out;
+}
+
+.subcategory-items-utils i,
+.subcategory-item-input i
+{
+    padding-top: 0.1rem;
+    cursor: pointer;
+}
+
+.subcategory-item-input i
+{
+    color: red;
+}
+
+.subcategory-item-input i:hover
+{
+    color: #e30000;
+    transition: 150ms ease-in-out;
+}

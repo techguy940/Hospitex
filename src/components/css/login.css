@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "~@flaticon/flaticon-uicons/css/all/all";
+
+
+:root
+{
+  --primary-color: #ff7300;
+  --secondary-color: #cf5d00;
+  --login-bg-color: #d6d6d6;
+  --bg-color: white;
+}
+
+.login-parent
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--login-bg-color);
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;  
+}
+
+.login-div
+{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  background-color: white;
+  margin: 1rem;
+  padding: 2rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  border-radius: 5px;
+  border: 1px solid white;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+}
+
+.login-div h1
+{
+  text-transform: uppercase;
+  color: var(--primary-color);
+  letter-spacing: 4px;
+}
+
+.login-div input[id="username"]
+{
+  margin-top: 2rem;
+  margin-bottom: .75rem;
+}
+
+.login-div input
+{
+  padding: .25rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  width: 250px;
+  border: 3px solid var(--login-bg-color);
+  outline: none;
+}
+
+.login-div input:focus
+{
+  border: 3px solid var(--primary-color);
+  border-radius: 5px;
+  transition: 100ms ease-in-out;
+}
+
+.login-div #submitBtn
+{
+  margin-top: 1.5rem;
+  padding: .25rem;
+  width: 125px;
+  height: 40px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  outline: none;
+  border: none;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.login-div #submitBtn:hover
+{
+  background-color: var(--secondary-color);
+  color: #dedcdc;
+  transition: 100ms ease-in-out;
+}
+
+.login-div #passwordIcon
+{
+  position: absolute;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  color: black;
+  right: 41rem;
+  top: 23.7rem;
+  /* background-image: url("../images/eyeclosed.png");
+  background-size: cover;
+  background-repeat: no-repeat; */
+  cursor: pointer;
+}

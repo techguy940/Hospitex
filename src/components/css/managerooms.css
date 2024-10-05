@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root
+{
+  --primary-color: #ff7300;
+  --secondary-color: #cf5d00;
+  --login-bg-color: #d6d6d6;
+  --bg-color: white;
+}
+
+.manage-rooms-main
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.manage-rooms-title
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 1.3rem;
+}
+
+.floor
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.floor-title
+{
+    height: 2px;
+    background-color: var(--login-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+}
+
+.floor-title .floor-number
+{
+    background-color: white;
+    padding: 0.25rem;
+    text-transform: uppercase;
+    color: var(--login-bg-color);
+    font-weight: 600;
+    letter-spacing: 12px;
+    font-size: 1rem;
+}
+
+.rooms
+{
+    display: grid; 
+    grid-template-columns: repeat(10, 1fr);
+    grid-column-gap: 0.5rem;
+    margin-left: 4.5rem;
+    grid-row-gap: 1rem;
+}
+
+.room
+{
+    display: flex;
+    flex-direction: column;
+    width: 8rem;
+    height: 8rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.room .gray
+{
+    background-color: #d9d9d9;
+    width: 8rem;
+    height: 8rem;
+    opacity: 0;
+    position: absolute;
+}
+
+.room:hover .gray
+{
+    opacity: 0.9;
+    transition: 150ms ease-in-out;
+}
+
+.room .room-number
+{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.room .bold
+{
+    font-weight: 600;
+}
+
+.add-room
+{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 2rem;
+    padding-bottom: 0.5rem;
+    
+}
+
+.add-room .add-room-btn i
+{
+    padding-top: 0.2rem;
+}
+
+.add-room .add-room-btn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    padding: .25rem;
+    width: 10rem;
+    height: 40px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.add-room .add-room-btn:hover
+{
+    background-color: var(--secondary-color);
+    color: #dedcdc;
+    transition: 100ms ease-in-out;
+}
+
+.gray
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.gray i
+{
+    font-size: 1.5rem;
+    transition: 150ms ease-in-out;
+}
+
+.gray #edit-room-btn
+{
+    color: black;
+}
+
+.gray #delete-room-btn
+{
+    color: red;
+}
+
+.add-room-modal,
+.modify-room-modal
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.delete-room-modal
+{
+    padding: 0;
+    margin: 0;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.add-room-title,
+.modify-room-title,
+.delete-room-title
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    width: 38.5rem;
+    padding: 0.5rem;
+}
+
+.delete-room-title
+{
+    width: 29rem;
+}
+
+.add-room-title h1,
+.delete-room-title h1,
+.modify-room-title h1
+{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+}
+
+.add-room-title i,
+.delete-room-title i,
+.modify-room-title i
+{
+    padding-top: 0.4rem;
+    padding-right: 0.2rem;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.add-room-inputs,
+.modify-room-inputs
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: black;
+}
+
+.add-room-inputs section,
+.modify-room-inputs section
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-room-inputs section label,
+.modify-room-inputs section label
+{
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.add-room-inputs section label .compulsory,
+.modify-room-inputs section label .compulsory
+{
+    color: red;
+}
+
+.room-num-input,
+.floor-num-input,
+.capacity-input
+{
+    height: 30px;
+    padding: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border: 2px solid var(--login-bg-color);
+    border-radius: 2px;
+    outline: none;
+}
+
+.capacity-input
+{
+    width: 13.8rem;
+}
+
+.room-num-input:focus,
+.floor-num-input:focus,
+.capacity-input:focus
+{
+    border: 2px solid black;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]
+{
+    -moz-appearance: textfield;
+}
+
+.final-section
+{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.final-section button
+{
+    padding: 0.25rem;
+    margin-top: 1.3rem;
+    width: 10rem;
+    height: 35px;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.final-section button:hover
+{
+    background-color: var(--secondary-color);
+    color: #dedcdc;
+    transition: 150ms ease-in-out;
+}
+
+.delete-room-text
+{
+    padding: 1rem;
+    color: black;
+}
+
+.delete-room-text p
+{
+    font-size: 1.1rem;
+}
+
+.delete-room-btns
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.delete-room-btns button
+{
+    color: white;
+    font-size: 1rem;
+    width: 14.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 0;
+    height: 2.5rem;
+}
+
+.delete-room-btns #go-back-btn
+{
+    background-color: #00ff22;
+}
+
+.delete-room-btns #delete-btn
+{
+    background-color: #ff1500;
+}

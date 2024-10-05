@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root
+{
+  --primary-color: #ff7300;
+  --secondary-color: #cf5d00;
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;  
+}
+
+.manage-hotel-parent .manage-hotel-title h1
+{
+  font-size: 2rem;
+}
+
+.manage-hotel-parent
+{
+    margin: 2rem;
+    margin-top: 0rem;
+    padding: 1rem;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.manage-hotel-parent section
+{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.orange
+{
+  color: var(--primary-color);
+}
+
+.manage-hotel-form
+{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.manage-hotel-form .hotel-input #hotel-name-input
+{
+    width: 40rem;
+}
+
+.manage-hotel-form .hotel-input #owner-name-input
+{
+    width: 40rem;
+}
+
+.manage-hotel-form .hotel-input #gstn-input
+{
+    width: 40rem;
+}
+
+.manage-hotel-form .hotel-input #phone-num-input
+{
+    width: 17rem;
+}
+
+.manage-hotel-form .hotel-input #email-input
+{
+    width: 22rem;
+}
+
+.manage-hotel-form .hotel-input #address-input
+{
+    width: 40rem;
+    height: 4rem;
+}
+
+.manage-hotel-form .hotel-input #state-input
+{
+    width: 19.5rem;
+}
+
+.manage-hotel-form .hotel-input #city-input
+{
+    width: 19.5rem;
+}
+
+.manage-hotel-form .hotel-input #bf-price-input,
+.manage-hotel-form .hotel-input #lunch-price-input,
+.manage-hotel-form .hotel-input #dinner-price-input
+{
+    width: 10.8rem;
+    text-align: right;
+}
+
+.manage-hotel-form #submitBtn
+{
+  margin-top: 1.5rem;
+  padding: .25rem;
+  width: 13rem;
+  height: 40px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  outline: none;
+  border: none;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.manage-hotel-form #submitBtn:hover
+{
+  background-color: var(--secondary-color);
+  color: #dedcdc;
+  transition: 100ms ease-in-out;
+}
+
+.manage-hotel-form #resetBtn
+{
+  margin-top: 1.5rem;
+  padding: .25rem;
+  width: 13rem;
+  height: 40px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+  font-weight: 600;
+  outline: none;
+  border: none;
+  background-color: var(--login-bg-color);
+  cursor: pointer;
+}
+
+.manage-hotel-form section
+{
+  position: relative;
+}
+
+.manage-hotel-form section i
+{
+  font-size: 1.3rem;
+  position: absolute;
+  right: 0;
+  bottom: 2.25rem;
+  cursor: pointer;
+}

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root
+{
+  --primary-color: #ff7300;
+  --secondary-color: #cf5d00;
+}
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;  
+}
+
+.wrapper
+{
+    width: 100%;
+    background-image: url("../images/hoteldetails.jpg");
+    background-position: right;
+    background-size: 800px 500px;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+}
+
+.hotel-main
+{
+    margin: 2rem;
+    margin-top: 0rem;
+    padding: 2rem;
+    padding-top: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.hotel-main #hotel-heading
+{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hotel-main #hotel-heading span
+{
+    color: var(--primary-color);
+}
+
+.hotel-main section
+{
+    display: flex;
+    gap: 1rem;
+}
+
+.hotel-main .hotel-input #hotel-name-input
+{
+    width: 35rem;
+}
+
+.hotel-main .hotel-input #owner-name-input
+{
+    width: 35rem;
+}
+
+.hotel-main .hotel-input #gstn-input
+{
+    width: 35rem;
+}
+
+.hotel-main .hotel-input #phone-num-input
+{
+    width: 15rem;
+}
+
+.hotel-main .hotel-input #email-input
+{
+    width: 19rem;
+}
+
+.hotel-main .hotel-input #address-input
+{
+    width: 35rem;
+    height: 4rem;
+}
+
+.hotel-main .hotel-input #state-input
+{
+    width: 17rem;
+}
+
+.hotel-main .hotel-input #city-input
+{
+    width: 17rem;
+}
+
+.hotel-main .hotel-input #bf-price-input,
+.hotel-main .hotel-input #lunch-price-input,
+.hotel-main .hotel-input #dinner-price-input
+{
+    width: 9.13rem;
+    text-align: right;
+}
+
+.hotel-main #submitBtn
+{
+  margin-top: 1.5rem;
+  padding: .25rem;
+  width: 10rem;
+  height: 40px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  outline: none;
+  border: none;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.hotel-main #submitBtn:hover
+{
+  background-color: var(--secondary-color);
+  color: #dedcdc;
+  transition: 100ms ease-in-out;
+}
+
+.hotel-main #resetBtn
+{
+  margin-top: 1.5rem;
+  padding: .25rem;
+  width: 10rem;
+  height: 40px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+  font-weight: 600;
+  outline: none;
+  border: none;
+  background-color: var(--login-bg-color);
+  cursor: pointer;
+}
+
+.hotel-main .hotel-input .compulsory
+{
+    color: red;
+}

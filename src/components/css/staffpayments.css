@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root
+{
+  --primary-color: #ff7300;
+  --secondary-color: #cf5d00;
+  --login-bg-color: #d6d6d6;
+  --bg-color: white;
+}
+
+.staff-payments-parent
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.staff-payments-title
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.staff-payments-main
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
+    margin-left: 9rem;
+    margin-top: 3rem;
+}
+
+.staff-designation.resigned
+{
+    color: red;
+}
+
+.add-payment-main
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-payment-title
+{
+    display: flex;
+    width: 30rem;
+    background-color: var(--primary-color);
+    color: white;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.add-payment-title h1
+{
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.add-payment-title i
+{
+    margin-top: 0.3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.add-payment-text
+{
+    display: flex;
+    padding: 1rem;
+    width: 30rem;
+    justify-content: space-evenly;
+    color: black;
+}
+
+.staff-name,
+.staff-id
+{
+    font-weight: 500;
+}
+
+.add-payment-inputs
+{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 0;
+    gap: 0.5rem;
+}
+
+.add-payment-input
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-payment-input label
+{
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.add-payment-input label .compulsory
+{
+    color: red;
+}
+
+.add-payment-input input,
+.add-payment-input select
+{
+    padding-top: 0.3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.3rem;
+    border: 2px solid var(--login-bg-color);
+    outline: none;
+    border-radius: 3px;
+    color: black;
+}
+
+.add-payment-input input:focus,
+.add-payment-input select:focus
+{
+    border: 2px solid black;
+    transition: 150ms ease-in-out;
+}
+
+.salary-data
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.salary-data section
+{
+    display: flex;
+    align-items: center;
+}
+
+.salary-data section label
+{
+    width: 50px;
+}
+
+.salary-data section span
+{
+    color: black;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    margin-right: 0.2rem;
+}
+
+.salary-data section input
+{
+    padding: 0;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    direction: rtl;
+    border: none;
+    border-left: 3px solid var(--login-bg-color);
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: black;
+    outline: none;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    width: 5rem;
+}
+
+.salary-data section input:focus
+{
+    border: none;
+    border-left: 3px solid var(--login-bg-color);
+    transition: 0;
+}
+
+.amount-input
+{
+    display: flex;
+    border: 2px solid var(--login-bg-color);
+    outline: none;
+    align-items: center;
+    width: 10rem;
+    padding-left: 0.5rem;
+    border-radius: 3px;
+    padding-right: 0.5rem;
+}
+
+.amount-input span
+{
+    color: black;
+    padding-right: 0.5rem;
+    border-right: 2px solid var(--login-bg-color);
+}
+
+.amount-input input,
+.amount-input input:focus
+{
+    border: none;
+    transition: 0;
+    width: 100%;
+    direction: rtl;
+}
+
+.amount-input:focus-within
+{
+    border: 2px solid black;
+    transition: 150ms ease-in-out;
+}
+
+.add-payment-btn button
+{
+    width: 30rem;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.add-payment-btn button:hover
+{
+    color: var(--login-bg-color);
+    background-color: var(--secondary-color);
+    transition: 150ms ease-in-out;
+}
+
+.report-main,
+.payslip-main
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.report-title,
+.payslip-title
+{
+    display: flex;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    justify-content: space-between;
+    width: 30rem;
+    align-items: center;
+    color: white;
+    background-color: var(--primary-color);
+    height: 40px;
+}
+
+.report-title h1,
+.payslip-title h1
+{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.report-title i,
+.payslip-title i
+{
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 0.3rem;
+}
+
+.report-text,
+.payslip-text
+{
+    display: flex;
+    padding: 1rem;
+    color: black;
+    justify-content: space-evenly;
+}
+
+.report-inputs,
+.payslip-inputs
+{
+    display: flex;
+    padding: 1rem;
+    padding-top: 0;
+    color: black;
+}
+
+.report-inputs
+{
+    justify-content: space-evenly;
+}
+
+.report-input,
+.payslip-input
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.report-input label,
+.payslip-input label
+{
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.report-input label .compulsory,
+.payslip-input label .compulsory
+{
+    color: red;
+}
+
+.report-input input,
+.payslip-input input
+{
+    border: 2px solid var(--login-bg-color);
+    border-radius: 3px;
+    outline: none;
+    height: 30px;
+}
+
+.payslip-input:nth-child(1)
+{
+    margin-left: 2rem;
+}
+
+/* .report-input:nth-child(1)
+{
+    margin-left: 1.7rem;
+}
+
+.report-input:nth-child(2)
+{
+    margin-left: 3.2rem;
+} */
+
+.report-btn,
+.payslip-btn
+{
+    margin-top: 1rem;
+}
+
+.report-btn button,
+.payslip-btn button
+{
+    border: none;
+    outline: none;
+    width: 30rem;
+    height: 40px;
+    color: white;
+    background-color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.report-btn button:hover,
+.payslip-btn button:hover
+{
+    color: var(--login-bg-color);
+    background-color: var(--secondary-color);
+    transition: 150ms ease-in-out;
+}

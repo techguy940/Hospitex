@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root
+{
+  --primary-color: #ff7300;
+  --secondary-color: #cf5d00;
+  --login-bg-color: #d6d6d6;
+  --bg-color: white;
+}
+
+.statistics-main
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.statistics-title
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.statistics-title h1
+{
+    color: var(--primary-color);
+}
+
+.content-main
+{
+    display: flex;
+    gap: 5rem;
+}
+
+.recent-customers
+{
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-left: 9rem;
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    border-radius: 5px;
+    gap: 0.5rem;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+}
+
+.recent-customers-title
+{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.recent-customers-title p,
+.recent-customers-title i
+{
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.recent-customers-title i
+{
+    margin-top: 0.3rem;
+}
+
+.customer
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.customer-name
+{
+    font-size: 1rem;
+} 
+
+.customer-time
+{
+    font-size: 0.8rem;
+    color: #b5b5b5;
+} 
+
+.customer section
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.customer-room-num
+{
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.sales-data,
+.advance-data
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    gap: 1rem;
+}
+
+.sales-title-section,
+.advance-title-section
+{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.sales-title-section i,
+.sales-title-section p,
+.advance-title-section p,
+.advance-title-section i
+{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.sales-title-section i,
+.advance-title-section i
+{
+    margin-top: 0.1rem;
+}
+
+.sales-amount,
+.advance-amount
+{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.sales-text,
+.advance-text
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 25rem;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.75);
+}
+
+.date-btns
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.date-btn
+{
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 0.9rem;
+    height: 30px;
+    cursor: pointer;
+}
+
+.date-btn:hover
+{
+    color: #dedcdc;
+    background-color: var(--secondary-color);
+    transition: 150ms ease-in-out;
+}
+
+.custom-date
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.custom-date section
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-date section label
+{
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+.custom-date section input
+{
+    border: 2px solid var(--login-bg-color);
+    outline: none;
+    width: 8rem;
+    height: 30px;
+}
+
+.custom-date section input:focus
+{
+    border: 2px solid black;
+    transition: 150ms ease-in-out;
+}
+
+.charts-main
+{
+    display: flex;
+    margin-left: 8rem;
+    margin-top: 2rem;
+}
+
+.charts-main section
+{
+    width: 800px;
+}
+
+.charts-main h1
+{
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+}
+
+.no-sales,
+.no-advance
+{
+    color: var(--primary-color);
+}

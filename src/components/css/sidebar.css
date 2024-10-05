@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "~@flaticon/flaticon-uicons/css/all/all";
+
+
+:root
+{
+  --primary-color: #ff7300;
+  --secondary-color: #cf5d00;
+  --login-bg-color: #d6d6d6;
+  --bg-color: white;
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;  
+}
+
+.sidebar-main
+{
+    z-index: 10000;
+    position: fixed;
+    padding: 1rem;
+    padding-top: 3rem;
+    padding-left: 0rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 0rem;
+    width: 58px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+
+.sidebar-main:hover
+{
+    width: 250px;
+    transition: width 250ms ease-in-out;
+}
+.sidebar-main:hover h1
+{
+    color: white;
+}
+.sidebar-main section
+{
+    display: flex;
+    flex-direction: column;
+    /* gap: 2rem; */
+
+}
+
+.sidebar-main section img
+{
+    width: 30px;
+    height: 30px;
+    color: black;
+    cursor: pointer;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(82deg) brightness(105%) contrast(105%);
+}
+
+
+/* .sidebar-main:has(.menuItem:hover)
+{
+    width: 250px;
+    transition: width 250ms ease-in-out;
+} */
+
+.sidebar-main
+{
+    overflow: hidden;
+}
+
+.sidebar-main .menuItems .menuItem
+{
+    display: flex;
+    padding: 0.8rem;
+    padding-left: 1rem;
+    /* padding-left: 0.6rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem; */
+    width: 400px;
+    gap: 0.8rem;
+    align-items: center;
+    /* border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px; */
+    cursor: pointer;
+    color: white;
+}
+
+.sidebar-main .menuItems .menuItem:hover,
+.sidebar-main .menuItems .menuItem.active
+{
+    background-color: white;
+    transition: 150ms ease-in-out;
+    color: black;
+    filter: none;
+}
+
+.sidebar-main .menuItems .menuItem:hover img,
+.sidebar-main .menuItems .menuItem.active img
+{
+    filter: none;
+}
+
+.sidebar-main .hotelName
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.sidebar-main .hotelName,
+.sidebar-main .hotelName h1
+{
+    pointer-events: none;
+}
